@@ -74,7 +74,7 @@
         .footer-call { background: white; color: var(--midnight); border-right: 1px solid #eee; }
         .footer-enquire { background: linear-gradient(135deg, var(--btn-light), var(--btn-dark)); color: var(--midnight); }
 
-        @media (max-width: 768px) { .sticky-footer-bar { display: grid; } body { padding-bottom: 65px; } }
+        @media (max-width: 768px) { .sticky-footer-bar { display: grid; } body { padding-bottom: 65px; } .hero { padding: 80px 0 160px 0  } }
 
         /* HERO */
         .hero { 
@@ -112,13 +112,15 @@
         /* CITY CARDS */
         .city-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px 20px; background: white; font-weight: 700; cursor: pointer; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
         .city-card:hover { border-color: var(--champagne); transform: translateY(-3px); }
+
+        @media (max-width: 768px) { .hero { padding: 80px 0 160px 0  } }
     </style>
 </head>
 <body>
 
 <nav class="navbar sticky-top">
     <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" href="#">COLLEGE<span style="color:var(--champagne)">PACIFIC</span></a>
+        <a class="navbar-brand" href="#"><img src="logo.png" style="width: 100px;" /></a>
         <div class="header-action-stack">
             <a href="#enquire" class="btn btn-gradient">Enquire Now</a>
             <a href="tel:7055690123" class="nav-phone-sub">
