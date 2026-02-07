@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CollegePacific | MBA & PGDM Admissions 2026</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17899087081"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17899087081');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --midnight: #020617;
+            --champagne: #D4AF37;
+            --btn-light: #FFC93C;
+            --btn-dark: #E0A829;
+            --highlight-pink: #FDECEC;
+            --highlight-gold: #FEF6E1;
+            --icon-red: #D94646;
+            --icon-gold: #C6941C;
+        }
+
+        html, body { font-family: 'Instrument Sans', sans-serif; color: var(--midnight); overflow-x: hidden; scroll-behavior: smooth; background-color: #fff; }
+        .big-heading { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(2rem, 5vw, 2.6rem); margin-bottom: 50px; text-align: center; }
+        section { padding: 90px 0; }
+
+        /* HEADER LOGIC - PROFESSIONAL ALIGNMENT */
+        .navbar { 
+            background: rgba(255,255,255,0.98); 
+            backdrop-filter: blur(10px); 
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04); 
+            padding: 12px 0; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+        }
+        .navbar-brand { font-size: 1.5rem; color: var(--midnight); font-weight: 800; text-transform: uppercase; text-decoration: none; }
+        
+        .header-action-stack { display: flex; flex-direction: column; align-items: flex-end; justify-content: center; }
+        .btn-gradient { 
+            background: linear-gradient(135deg, var(--btn-light) 0%, var(--btn-dark) 100%); 
+            color: var(--midnight); border: none; font-weight: 700; padding: 10px 22px; border-radius: 8px; 
+            text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; text-decoration: none;
+        }
+        .nav-phone-sub { 
+            color: var(--midnight); font-weight: 700; text-decoration: none; font-size: 0.75rem; margin-top: 5px;
+            display: flex; align-items: center; gap: 4px;
+        }
+        .nav-phone-sub i { color: var(--champagne); }
+
+        @media (min-width: 769px) {
+            .navbar { padding: 18px 0; }
+            .header-action-stack { flex-direction: row; gap: 25px; align-items: center; }
+            .nav-phone-sub { margin-top: 0; font-size: 1rem; }
+            .btn-gradient { padding: 12px 30px; font-size: 0.85rem; }
+            .navbar-brand { font-size: 1.7rem; }
+        }
+
+        /* MOBILE STICKY FOOTER */
+        .sticky-footer-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%; height: 65px; background: white;
+            display: none; grid-template-columns: 1fr 1fr; z-index: 10000; box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        .footer-action { display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; gap: 10px; }
+        .footer-call { background: white; color: var(--midnight); border-right: 1px solid #eee; }
+        .footer-enquire { background: linear-gradient(135deg, var(--btn-light), var(--btn-dark)); color: var(--midnight); }
+
+        @media (max-width: 768px) { .sticky-footer-bar { display: grid; } body { padding-bottom: 65px; } }
+
+        /* HERO */
+        .hero { 
+            background: linear-gradient(rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.88)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400') center/cover; 
+            padding: 160px 0; color: white; text-align: center; 
+        }
+
+        /* ABOUT BOX */
+        .section-gradient { background: radial-gradient(circle at top left, rgba(255, 201, 60, 0.15), transparent 50%), radial-gradient(circle at bottom right, rgba(26, 77, 143, 0.12), transparent 50%), #F9FAFB; }
+        .elegant-content-box { background: white; padding: clamp(30px, 5vw, 60px); border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); position: relative; border: 1px solid rgba(212, 175, 55, 0.1); }
+        .intro-text { font-size: 1.2rem; line-height: 1.9; color: #475569; text-align: center; position: relative; z-index: 2; }
+        .bg-quote { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 12rem; color: var(--champagne); opacity: 0.05; z-index: 1; font-family: serif; }
+
+        /* HIGHLIGHTS - ENLARGED ICONS */
+        .h-card { display: flex; background: #fff; border-radius: 18px; border: 1.5px solid #edf2f7; transition: 0.3s; height: 100%; overflow: hidden; }
+        .h-card:hover { transform: translateY(-5px); border-color: var(--champagne); }
+        .h-icon-box { width: 110px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .h-icon-box i { font-size: 3rem; }
+        .h-content { padding: 25px; display: flex; flex-direction: column; justify-content: center; }
+        .h-content h5 { font-size: 1.4rem; font-weight: 800; margin-bottom: 4px; }
+
+        @media (max-width: 768px) { .h-card { flex-direction: row; } .h-icon-box { width: 100px; } }
+
+        /* TESTIMONIALS - FULL CONTENT */
+        .testimonial-card { background: white; border-radius: 20px; padding: 40px; height: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03); position: relative; }
+        .rating-stars { color: #FFC107; margin-bottom: 15px; font-size: 1.1rem; }
+        .truncated { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+        .read-more-btn { color: var(--champagne); font-weight: 700; cursor: pointer; border: none; background: none; font-size: 0.85rem; margin-top: 10px; text-decoration: underline; }
+
+        /* RECRUITERS */
+        .partner-box { background: white; border: 1px solid #e2e8f0; border-radius: 15px; height: 110px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: 0.3s; }
+        .partner-box img { max-width: 100%; max-height: 45px; filter: grayscale(1); opacity: 0.6; }
+
+        /* CITY CARDS */
+        .city-card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px 20px; background: white; font-weight: 700; cursor: pointer; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .city-card:hover { border-color: var(--champagne); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+<nav class="navbar sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">COLLEGE<span style="color:var(--champagne)">PACIFIC</span></a>
+        <div class="header-action-stack">
+            <a href="#enquire" class="btn btn-gradient">Enquire Now</a>
+            <a href="tel:7055690123" class="nav-phone-sub">
+                <i class="bi bi-telephone-fill"></i> (705) 569-0123
+            </a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container px-4">
+        <h1 class="display-3 mb-4 fw-bold">Find Your Best MBA / PGDM College 2026</h1>
+        <p class="lead mb-5 opacity-80 mx-auto" style="max-width: 800px; font-size: 1.3rem;">Providing elite admissions support and expert counseling for India's top B-Schools.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#enquire" class="btn btn-gradient px-4 py-3">Get Free Counselling</a>
+            <a href="#enquire" class="btn btn-outline-light px-4 py-3 fw-bold text-decoration-none">Apply Now</a>
+        </div>
+    </div>
+</header>
+
+<section id="about" class="section-gradient">
+    <div class="container">
+        <h2 class="big-heading">Your Trusted <span style="color: var(--champagne);">Education Partner</span></h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="elegant-content-box">
+                    <div class="bg-quote">“</div>
+                    <p class="intro-text">
+                        <span style="color: var(--champagne); font-weight: 600;">College Pacific India</span> is a trusted education partner for aspirants looking to pursue MBA and PGDM programs from top institutes in India. We assist students in choosing the right MBA program, PGDM course, and specialization based on their career goals, academic background, and entrance scores. Our platform provides guidance for full-time MBA, PGDM in Marketing, Finance, HR, Operations, Business Analytics, and other management programs offered by leading B-schools. From MBA admissions support and PGDM college selection to application assistance and counselling, College Pacific India helps students make informed decisions and secure admissions in reputed MBA and PGDM colleges across India.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="highlights">
+    <div class="container">
+        <h2 class="big-heading">Key Highlights</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FDECEC"><i class="bi bi-graph-up-arrow" style="color:#D94646"></i></div>
+                    <div class="h-content"><h5>8-12 LPA</h5><p>Average Package</p></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FEF6E1"><i class="bi bi-trophy" style="color:#C6941C"></i></div>
+                    <div class="h-content"><h5>40-45 LPA</h5><p>Highest Package</p></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FDECEC"><i class="bi bi-patch-check" style="color:#D94646"></i></div>
+                    <div class="h-content"><h5>100% Placement</h5><p>Full Assistance</p></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FEF6E1"><i class="bi bi-mortarboard" style="color:#C6941C"></i></div>
+                    <div class="h-content"><h5>Scholarships</h5><p>Merit Based Support</p></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FEF6E1"><i class="bi bi-bank" style="color:#C6941C"></i></div>
+                    <div class="h-content"><h5>Easy Bank Loan</h5><p>Hassle-free Facility</p></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="h-card">
+                    <div class="h-icon-box" style="background:#FDECEC"><i class="bi bi-globe-americas" style="color:#D94646"></i></div>
+                    <div class="h-content"><h5>International</h5><p>Immersion Program</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cities" class="section-gradient">
+    <div class="container text-center">
+        <h2 class="big-heading">Explore Colleges by City</h2>
+        <div class="row g-4 justify-content-center mb-5">
+            <div class="col-6 col-md-3 col-lg-2"><div class="city-card" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="updateModal('Pune', ['Lexicon MILE', 'RIIM Pune', 'SIBM', 'PIBM', 'ISMS Pune'])">Pune</div></div>
+            <div class="col-6 col-md-3 col-lg-2"><div class="city-card" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="updateModal('Mumbai', ['JBIMS', 'SPJIMR', 'NMIMS', 'Welingkar', 'KJ Somaiya'])">Mumbai</div></div>
+            <div class="col-6 col-md-3 col-lg-2"><div class="city-card" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="updateModal('Delhi NCR', ['GL Bajaj', 'ABS Noida', 'IBI College', 'Jaipuria', 'JIMS Rohini'])">Delhi NCR</div></div>
+            <div class="col-6 col-md-3 col-lg-2"><div class="city-card" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="updateModal('Bangalore', ['IIBS', 'GIBS', 'JAGSOM', 'Alliance University', 'ISME'])">Bangalore</div></div>
+        </div>
+        <a href="#enquire" class="btn btn-gradient px-5 py-3 shadow-sm">Apply Now</a>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2 class="big-heading">Voices of Success</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                    <i class="bi bi-quote quote-icon"></i>
+                    <p class="truncated">"CollegePacific simplified my entire admission journey. The counselors helped me choose the perfect specialization based on my profile. I was overwhelmed by the choices in Bangalore, but they provided a direct ROI comparison that made the decision easy. Truly a life-changing experience that led me to my dream institute with a full scholarship."</p>
+                    <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                    <div class="mt-4"><strong>Aditya Roy</strong><br><small class="text-muted">Placed at Amazon</small></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                    <i class="bi bi-quote quote-icon"></i>
+                    <p class="truncated">"The counseling I received was unbiased and truly transparent. They didn't just push top-ranked colleges; they matched me with a program that fit my entrance scores and Finance specialization goals. Their interview prep sessions were the reason I cleared the final rounds of my chosen B-School. I secured my PGDM seat within days!"</p>
+                    <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                    <div class="mt-4"><strong>Sneha Kapoor</strong><br><small class="text-muted">Placed at Deloitte</small></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                    <i class="bi bi-quote quote-icon"></i>
+                    <p class="truncated">"Navigating the Delhi NCR B-school landscape was impossible without help. CollegePacific provided deep insights into recruiter networks for Marketing. I saved weeks of research and ended up at a college that has a 100% placement record. Their support is genuine, professional, and results-oriented."</p>
+                    <button class="read-more-btn" onclick="toggleText(this)">Read More</button>
+                    <div class="mt-4"><strong>Rahul Khanna</strong><br><small class="text-muted">Placed at PwC</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="partners" class="section-gradient">
+    <div class="container text-center">
+        <h2 class="big-heading">Recruitment Partners</h2>
+        <div class="row g-3 justify-content-center">
+            <div class="col-4 col-md-2"><div class="partner-box"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div></div>
+            <div class="col-4 col-md-2"><div class="partner-box"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"></div></div>
+            <div class="col-4 col-md-2"><div class="partner-box"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS"></div></div>
+            <div class="col-4 col-md-2"><div class="partner-box"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"></div></div>
+            <div class="col-4 col-md-2"><div class="partner-box"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PricewaterhouseCoopers_Logo.svg" alt="PWC"></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="enquire">
+    <div class="container">
+        <h2 class="big-heading">Request Callback</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="p-5 bg-white shadow-lg rounded-4 border-top border-4 border-warning">
+                    <form>
+                        <div class="mb-3"><input type="text" class="form-control p-3" placeholder="Full Name" required></div>
+                        <div class="mb-3"><input type="tel" class="form-control p-3" placeholder="Mobile Number" required></div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-6"><select id="inputState" class="form-select p-3" onchange="populateCities()" required><option value="">State</option></select></div>
+                            <div class="col-6"><select id="inputCity" class="form-select p-3" required><option value="">City</option></select></div>
+                        </div>
+                        <button class="btn btn-gradient w-100 p-3 mt-2">Submit Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 bg-dark text-white text-center">
+    <h4 class="mb-2">COLLEGE<span style="color:var(--champagne)">PACIFIC</span></h4>
+    <p class="small opacity-50 mb-0">© 2026 CollegePacific. All Rights Reserved.</p>
+</footer>
+
+<div class="sticky-footer-bar">
+    <a href="tel:7055690123" class="footer-action footer-call"><i class="bi bi-telephone-fill"></i> Call Now</a>
+    <a href="#enquire" class="footer-action footer-enquire"><i class="bi bi-pencil-square"></i> Enquire Now</a>
+</div>
+
+<div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow">
+            <div class="modal-header bg-dark text-white"><h5 class="modal-title" id="cityNameDisplay">Institutions</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body p-4 text-center">
+                <ul class="list-group list-group-flush text-start mb-4" id="collegeList"></ul>
+                <a href="#enquire" class="btn btn-gradient px-5 py-2" onclick="bootstrap.Modal.getInstance(document.getElementById('cityModal')).hide();">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const stateCityData = { 
+        "Maharashtra": ["Mumbai", "Pune", "Nagpur"], 
+        "Delhi": ["New Delhi", "Noida", "Gurgaon"], 
+        "Karnataka": ["Bangalore", "Mysore"], 
+        "Uttar Pradesh": ["Lucknow", "Noida", "Ghaziabad"] 
+    };
+
+    function populateStates() {
+        const stateSelect = document.getElementById('inputState');
+        for (let state in stateCityData) { stateSelect.options[stateSelect.options.length] = new Option(state, state); }
+    }
+
+    function populateCities() {
+        const stateSelect = document.getElementById('inputState');
+        const citySelect = document.getElementById('inputCity');
+        citySelect.length = 1;
+        if (stateSelect.value) { 
+            stateCityData[stateSelect.value].forEach(city => { citySelect.options[citySelect.options.length] = new Option(city, city); }); 
+        }
+    }
+
+    function updateModal(city, colleges) {
+        document.getElementById('cityNameDisplay').innerText = "Top Institutions in " + city;
+        const list = document.getElementById('collegeList');
+        list.innerHTML = colleges.map(c => `<li class="list-group-item border-0"><i class="bi bi-check-circle-fill me-2" style="color:#D4AF37"></i> ${c}</li>`).join('') + `<li class="list-group-item border-0 fw-bold text-muted">...Many More</li>`;
+    }
+
+    function toggleText(btn) {
+        const p = btn.previousElementSibling;
+        p.classList.toggle('truncated');
+        btn.innerText = p.classList.contains('truncated') ? 'Read More' : 'Read Less';
+    }
+
+    window.onload = populateStates;
+</script>
+</body>
+</html>
